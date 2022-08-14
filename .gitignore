@@ -1,0 +1,9 @@
+lib/
+.idea/
+# .jar file
+*.jar
+#IntelliJ files
+**/*.iml
+**/.idea
+**/.gradle
+out/
