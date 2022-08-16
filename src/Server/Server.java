@@ -6,14 +6,14 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class Server {
-    private static ArrayList clients = new ArrayList();
+    private static final ArrayList<ClientHandler> clients = new ArrayList<>();
 
     public static void main(String[] args) {
         ServerSocket serverSocket;
         Socket socket;
         try {
             serverSocket = new ServerSocket(5555);
-            while(true) {
+            while (true) {
                 System.out.println("Waiting for clients...");
                 socket = serverSocket.accept();
                 System.out.println("Connected");
